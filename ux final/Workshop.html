@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshops - Soundcard Club</title>
+
+    <!-- Links to your existing files and libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    
+    <!-- Link to your existing CSS file -->
+    <link href="styles/style.css" rel="stylesheet">
+    
+    <!-- Link to Google Fonts (to match the theme) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+    <div id="loader">
+        <div class="vinyl-spinner"></div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/images.png" alt="Soundcard Club Logo" width="50" height="50" class="me-2">
+                <div>
+                    <span class="brand-main-text">SOUNDCARD</span><br>
+                    <span class="brand-sub-text">CLUB</span>
+                </div>
+            </a>
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav mx-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="activitiesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span>About us</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="activitiesDropdown">
+                                <li><a class="dropdown-item" href="index.html">What we do</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="AboutUs.html">Why join us</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" id="activitiesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span>Activities</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="activitiesDropdown">
+                                <li><a class="dropdown-item dropdown-item-active" href="Workshop.html">Workshops</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="Performances.html">Showcases</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <!-- Text is now wrapped in a span. 'active' class on the <a> is for the underline. -->
+                            <a class="nav-link dropdown-toggle" href="#" id="getStartedDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span>Get Started</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="getStartedDropdown">
+                                <!-- The 'dropdown-item-active' class on the <li><a> is for the glow -->
+                                <li><a class="dropdown-item " href="membership-application.html">Join us</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+
+                            <a class="nav-link" href="find-us.html">Find Us</a>
+                        </li>
+                    </ul>
+
+
+                <!-- Right side elements -->
+                <div class="d-flex align-items-center navbar-right-elements">
+                    <div class="social-icons me-3">                                               <!--target="_blank"  opens link in separate browser tab."--> 
+                        <a href="https://www.youtube.com/channel/UCYNP0fi2xeucYqFzz6lB1Pw/featured" target="_blank" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/nypsoundcard/?hl=en" target="_blank" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/NYPSoundCard/" target="_blank" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                    
+                    <a href="membership-application.html" class="btn btn-join-now">Join Now</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    
+
+<!-- START: COPY AND PASTE THIS ENTIRE BLOCK -->
+<div class="container my-5 py-5">
+    <!-- Main Title -->
+    <div class="text-center mb-5">
+        <h1 class="display-4">Our Workshops</h1>
+        <p class="lead text-white-50">Choose a path to elevate your vocal skills.</p>
+    </div>
+
+<!-- The 3 navigation boxes in a row (NOW AS TABS) -->
+<div class="row" id="workshopTab" role="tablist">
+    
+    <!-- Workshop Box 1: Beginner Vocals -->
+    <div class="col-lg-4 mb-4">
+        <a href="#beginner-details" class="links">
+        <!-- This is now a <button> that controls the tab content -->
+        <button class="workshop-card-link active" data-bs-toggle="tab" data-bs-target="#beginner-details" type="button" role="tab" aria-controls="beginner-details" aria-selected="true">
+            <div class="workshop-card">
+                <i class="bi bi-mic-fill workshop-icon"></i>
+                <h3 class="workshop-title">Beginner Vocals</h3>
+                <p class="workshop-description">Master the fundamentals of breath control, pitch, and tone.</p>
+            </div>
+        </button>
+            </a>
+    </div>
+
+
+    <!-- Workshop Box 2: Intermediate Harmonies -->
+
+    <div class="col-lg-4 mb-4">
+        <a href="#intermediate-details" class="links">
+        <button class="workshop-card-link" data-bs-toggle="tab" data-bs-target="#intermediate-details" type="button" role="tab" aria-controls="intermediate-details" aria-selected="false">
+            <div class="workshop-card">
+                <i class="bi bi-graph-up-arrow workshop-icon"></i>
+                <h3 class="workshop-title">Intermediate Harmonies</h3>
+                <p class="workshop-description">Learn to blend your voice, hold harmonies, and sing in a group.</p>
+            </div>
+        </button>
+        </a>
+    </div>
+
+
+    <!-- Workshop Box 3: Advanced Performance -->
+
+    <div class="col-lg-4 mb-4">
+        <a href="#advanced-details" class="links">
+        <button class="workshop-card-link" data-bs-toggle="tab" data-bs-target="#advanced-details" type="button" role="tab" aria-controls="advanced-details" aria-selected="false">
+            <div class="workshop-card">
+                <i class="bi bi-star-fill workshop-icon"></i>
+                <h3 class="workshop-title">Advanced Performance</h3>
+                <p class="workshop-description">Develop stage presence, microphone technique, and solo performance skills.</p>
+            </div>
+        </button>
+        </a>
+    </div>
+</div>
+
+<!-- Divider Line -->
+<hr class="my-5" style="border-color: rgba(255,255,255,0.2);">
+
+<!-- This is the container for all the tab content panes -->
+<div class="tab-content" id="workshopTabContent">
+
+    <!-- Section 1: Beginner Details (Note the new classes) -->
+    <section id="beginner-details" class="workshop-detail-section tab-pane fade show active" role="tabpanel" aria-labelledby="beginner-tab">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h2>Beginner Vocals: Find Your Voice</h2>
+                <p>This 4-week course is designed for absolute beginners. You'll learn the core mechanics of singing in a fun, no-pressure environment. We focus on building a strong foundation so you can sing with confidence.</p>
+                <ul class="list-unstyled mt-4">
+                    <li class="mb-2"><i class="bi bi-check-circle-fill me-2"></i>Posture and Breath Support</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill me-2"></i>Understanding Your Vocal Range</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill me-2"></i>Basic Pitch Accuracy Exercises</li>
+                </ul>
+
+
+                <!--Workshop Form-->
+                <div class="workshop-signup-form mt-5">
+                <h5 class="form-title">Interested? Indicate Your Interest!</h5>
+                <form action="response.html" method="GET" class="row gx-2 align-items-center">
+                    <div class="col-auto">
+                        <label for="workshop-display-beginner" class="visually-hidden">Workshop</label>
+                        <input type="text" readonly class="form-control-plaintext workshop-display-field" id="workshop-display-beginner" value="Beginner Vocals">
+                        <!-- This hidden input will be submitted with the form data -->
+                        <input type="hidden" name="workshop" value="Beginner Vocals">
+                    </div>
+                    <div class="col">
+                        <label for="name-beginner" class="visually-hidden">Name</label>
+                        <input type="text" class="form-control" name="userName" id="name-beginner" placeholder="Enter Name" required>
+                    </div>
+                    <div class="col">
+                        <label for="email-beginner" class="visually-hidden">Email</label>
+                        <input type="email" class="form-control" name="userEmail" id="email-beginner" placeholder="Enter Email" required>
+                    </div>
+                    <div class="col-auto">
+                        <button type="submit" class="btn btn-join-now">Send</button>
+                    </div>
+                </form>
+                </div>
+
+
+
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="images/singer-background.jpeg" class="img-fluid rounded-3" alt="Beginner vocal workshop">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Intermediate Details (Note the new classes) -->
+    <section id="intermediate-details" class="workshop-detail-section tab-pane fade" role="tabpanel" aria-labelledby="intermediate-tab">
+        <div class="row align-items-center">
+            <div class="col-md-6 text-center">
+                <img src="images/Harmony.jpg" class="img-fluid rounded-3" alt="Group singing harmonies">
+            </div>
+            <div class="col-md-6">
+                <h2>Intermediate Harmonies: Singing Together</h2>
+                <p>Ready to sing with others? This workshop dives into the art of harmony. You'll learn how to listen to other singers, find your part, and create beautiful blended chords as a group.</p>
+                <ul class="list-unstyled mt-4">
+                    <li class="mb-2"><i class="bi bi-check-circle-fill me-2"></i>Introduction to Music Theory</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill me-2"></i>Holding a Harmony Part</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill me-2"></i>Blending and Vocal Dynamics</li>
+                </ul>
+
+
+                <!--Workshop Form-->
+                <div class="workshop-signup-form mt-5">
+                    <h5 class="form-title">Interested? Indicate Your Interest!</h5>
+                    <form action="response.html" method="GET" class="row gx-2 align-items-center">
+                        <div class="col-auto">
+                            <label for="workshop-display-intermediate" class="visually-hidden">Workshop</label> <!-- CHANGED -->
+                            <input type="text" readonly class="form-control-plaintext workshop-display-field" id="workshop-display-intermediate" value="Intermediate Harmonies"> <!-- CHANGED -->
+                            <!-- This hidden input will be submitted with the form data -->
+                            <input type="hidden" name="workshop" value="Intermediate Harmonies"> <!-- CHANGED -->
+                        </div>
+                        <div class="col">
+                            <label for="name-intermediate" class="visually-hidden">Name</label> <!-- CHANGED -->
+                            <input type="text" class="form-control" name="userName" id="name-intermediate" placeholder="Enter Name" required> <!-- CHANGED -->
+                        </div>
+                        <div class="col">
+                            <label for="email-intermediate" class="visually-hidden">Email</label> <!-- CHANGED -->
+                            <input type="email" class="form-control" name="userEmail" id="email-intermediate" placeholder="Enter Email" required> <!-- CHANGED -->
+                        </div>
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-join-now">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Advanced Details (Note the new classes) -->
+    <section id="advanced-details" class="workshop-detail-section tab-pane fade" role="tabpanel" aria-labelledby="advanced-tab">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h2>Advanced Performance: Own the Stage</h2>
+                <p>This intensive workshop is for experienced singers looking to elevate their stage presence. We cover everything from microphone technique to storytelling through song, preparing you for compelling solo performances.</p>
+                <ul class="list-unstyled mt-4">
+                    <li class="mb-2"><i class="bi bi-check-circle-fill me-2"></i>Advanced Microphone Control</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill me-2"></i>Crafting a Performance</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill me-2"></i>Connecting with an Audience</li>
+                </ul>
+
+                 <!--Workshop Form-->
+                <div class="workshop-signup-form mt-5">
+                    <h5 class="form-title">Interested? Indicate Your Interest!</h5>
+                    <form action="response.html" method="GET" class="row gx-2 align-items-center">
+                        <div class="col-auto">
+                            <label for="workshop-display-advanced" class="visually-hidden">Workshop</label>
+                            <input type="text" readonly class="form-control-plaintext workshop-display-field" id="workshop-display-advanced" value="Advanced Performance">
+                            <!-- This hidden input will be submitted with the form data -->
+                            <input type="hidden" name="workshop" value="Advanced Performance">
+                        </div>
+                        <div class="col">
+                            <label for="name-advanced" class="visually-hidden">Name</label>
+                            <input type="text" class="form-control" name="userName" id="name-advanced" placeholder="Enter Name" required>
+                        </div>
+                        <div class="col">
+                            <label for="email-advanced" class="visually-hidden">Email</label>
+                            <input type="email" class="form-control" name="userEmail" id="email-advanced" placeholder="Enter Email" required>
+                        </div>
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-join-now">Send</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="images/Stage.jpg" class="img-fluid rounded-3" alt="Solo singer performing on stage">
+            </div>
+        </div>
+    </section>
+</div>
+
+
+    <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-center">
+          <div class="modal-header">
+            <h5 class="modal-title" id="confirmationModalLabel">Interest Submitted!</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <i class="bi bi-check-circle-fill text-success display-1 mb-3"></i>
+            <p class="lead">Thanks for indicating your interest!<br>We will email you with more details soon.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Links to your existing JS files -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+
+
+           <!-- ================== 
+        SITE FOOTER
+  ================== -->
+  
+
+
+</body>
+</html>

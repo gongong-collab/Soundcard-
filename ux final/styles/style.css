@@ -1,0 +1,1735 @@
+
+:root {
+  --bg-color: #181818;
+  --text-color: rgba(255, 255, 255, 0.85);
+  --gold-main: #FFD700;
+  --muted-color: rgba(255, 255, 255, 0.6);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Lato', sans-serif;
+    line-height: 1.7;
+} 
+
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../images/padded.png'); /* A subtle texture */
+    opacity: 0.5; /* Make it BARELY visible */
+    z-index: -1; /* Place it behind all content */
+    pointer-events: none;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--gold-main)!important;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* glow effect */
+h1, h2, h3 {
+    text-shadow: 0 0 12px rgba(255, 215, 0, 0.5); 
+}
+
+/* ==================
+   NAVBAR STYLES
+   ================== */
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-family: 'Montserrat', sans-serif; /* A modern, clean font */
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Custom Logo Styling */
+.navbar-brand .brand-main-text {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.navbar-brand .brand-sub-text {
+    font-weight: 400;
+    font-size: 0.7rem;
+    letter-spacing: 4.5px;
+    display: block;
+    line-height: 0.5;
+    margin-left: 2px;
+}
+
+/* Centered Nav Links */
+.navbar-nav {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    color: #ffffff;
+    padding-right: 1.5rem !important;
+    padding-left: 1.5rem !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ffd700; /* Gold on hover */
+}
+
+/* Gold Underline for Active Link   
+1. Style the link text and prepare it for the custom underline */
+
+.nav-link.active {
+    font-weight: 700; /* Bolded text */
+    color: #ffd700 !important; /* Gold text */
+    position: relative; /* Needed for the ::after pseudo-element */
+}
+
+/* The actual underline */
+/* 2. Create the custom underline using a pseudo-element on the span */
+.nav-link.active span::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 1.5rem; /* Change to 0 */
+    right: 1.5rem; /* Change to 0 */
+    height: 3px;
+    background-color: #ffd700;
+}
+
+/* Styling for the dropdown menu */
+.dropdown-menu {
+    border-radius: 0;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    background-color: #1a1a1a;
+}
+
+.dropdown-item {
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.dropdown-item:hover {
+    background-color: #ffd700;
+    color: #000;
+}
+
+
+.dropdown-item.dropdown-item-active:hover {
+    background-color: #e6c300; 
+    color: #000 ;    /* Keep the text black so it's visible when background color changes */
+}
+
+/*=======================================
+ Styling for the active item within a dropdown menu 
+ ====================================================*/
+.dropdown-item-active {
+    color: #ffd700 ; /* Gold text */
+    font-weight: 700;
+    /* The glowing effect */
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
+}
+
+
+/* =======================================
+   CENTER ALIGN NAVBAR DROPDOWN MENU
+   ======================================= */
+
+/* targets dropdown menus ONLY when they are inside the main
+   centered navbar navigation list*/
+.navbar-nav .dropdown-menu {
+    /* 
+      this is the key centering technique for absolutely positioned elements.
+      1. 'left: 50%' pushes the menu's left edge to the center of the parent link.
+      2. 'transform' then pulls the menu back to the left by half of its OWN width.
+    */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* =======================================
+   CUSTOM DROPDOWN DIVIDER
+   ======================================= */
+
+/* This targets the  default black divider in dropdown*/
+.dropdown-menu-dark .dropdown-divider {
+    height: 1px; 
+    margin: 0.5rem 1rem; /* vertical and horizontal spacing */
+    background-color: rgba(255, 255, 255, 0.25); /* A semi-transparent white */
+    border: 0; /* Remove any default border */
+}
+
+
+/* Right Side Elements */
+.navbar-text {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+}
+
+
+
+
+
+
+/* ========================
+   NAVBAR SOCIAL ICONS
+   ======================== */
+.social-icons {
+    display: flex; /* Aligns icons in a row */
+    align-items: center;
+}
+
+.social-icon {
+    color: rgba(255, 255, 255, 0.8); /* A slightly softer white */
+    font-size: 1.5rem; /* Makes the icons larger and easier to click */
+    margin: 0 10px; /* Adds space between the icons */
+    transition: all 0.3s ease-in-out;
+    display: inline-block; /* Required for transform to work properly */
+}
+
+/* On hover, change color to gold and add a subtle "pop" effect */
+.social-icon:hover {
+    color: #ffd700; /* Gold color */
+    transform: scale(1.15) translateY(-2px); /* Makes the icon slightly bigger and lifts it */
+}
+
+
+
+.btn-join-now {
+    /* Base styles */
+    display: inline-block;
+    font-weight: 700;
+    padding: 10px 24px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    
+    /* The "Ghost Button" Themed Style */
+    background-color: transparent;
+    color: var(--gold-main);
+    border: 2px solid var(--gold-main);
+}
+
+/* The Hover Effect: Fills with gold, text turns black */
+.btn-join-now:hover {
+    background-color: var(--gold-main);
+    color: #000;
+    border-color: var(--gold-main);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3);
+}
+
+/* Responsive adjustments for a cleaner look on medium screens */
+@media (max-width: 1200px) {
+    .navbar-text {
+        display: none; /* Hide phone number on smaller screens to prevent clutter */
+    }
+}
+
+.btn-primary { 
+    background-color: #ffd700; 
+    border-color: #ffd700; 
+    color: #000; 
+} 
+
+.btn-primary:hover { 
+    background-color: #e6c300; 
+    border-color: #e6c300; 
+}
+
+
+
+/*===============
+END OF NAV
+ ================= */
+
+
+
+/* ==================
+   LOADER STYLES
+   ================== */
+#loader {
+    position: fixed; /* Sit on top of all content */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffd700; /* Golden yellow background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure it's on the very top */
+    /* This transition will be used to fade out the loader */
+    transition: opacity 0.75s ease;
+}
+
+/* This class will be added by JavaScript to hide the loader */
+#loader.hidden {
+    opacity: 0;
+    pointer-events: none; /* Disables interaction when hidden */
+}
+
+.vinyl-spinner {
+    width: 100px;
+    height: 100px;
+    background-color: #111; /* Dark vinyl color */
+    border-radius: 50%; /* Makes it a circle */
+    position: relative;
+    /* The spinning animation: 'spin' is the animation name, 1.2s is the duration,
+       'linear' is the timing, 'infinite' means it loops forever */
+    animation: spin 1.2s linear infinite;
+    /* Creating the vinyl grooves with box-shadows */
+    box-shadow:
+        inset 0 0 0 5px rgba(255, 255, 255, 0.1), /* Inner groove */
+        inset 0 0 0 10px rgba(0, 0, 0, 0.2),       /* Darker ring */
+        inset 0 0 0 15px rgba(255, 255, 255, 0.1), /* Second groove */
+        inset 0 0 0 20px rgba(0, 0, 0, 0.2),
+        inset 0 0 0 25px rgba(255, 255, 255, 0.1);
+}
+
+/* Creating the center label of the vinyl */
+.vinyl-spinner::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25px;
+    height: 25px;
+    background-color: #ffd700; /* Center label matches the background */
+    border-radius: 50%;
+    border: 3px solid #111; /* Border to separate it from the vinyl body */
+}
+
+/* Defines the keyframes for the spinning animation */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/*===============
+Spinner end
+================*/
+
+
+
+/* --- PARALLAX BANNER --- */
+
+.parallax-container {
+  height: 70vh; 
+  overflow-x: hidden;
+  perspective: 1px;
+}
+
+.parallax-background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  
+  background-image: url('../images/soundcardbg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 40%;
+
+}
+
+.parallax-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: white;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+
+#first-section-after-hero {
+    background-color: #111; 
+    border-top: 4px solid #ffd700; 
+    padding-top: 5rem; 
+}
+
+
+
+/* profile images */
+.profile-image {
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  width: 100%; /* Let the column control the width */
+  max-width: 400px; /* Set a max-width instead */
+  aspect-ratio: 3 / 4; /* Maintains a consistent shape */
+}
+
+/* quote block */
+.blockquote {
+  color: #ffffff;
+  font-size: 1.1rem; /* Makes the quote text slightly larger */
+  font-style: italic;
+  border-left: 4px solid var(--gold-main); /* Match your theme! */
+  padding-left: 1.5rem;
+}
+
+/* small EXCO member images  */
+.exco-member-img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover; /* This ensures the photo fills the circle without distortion */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+}
+
+
+
+/* Target the text-muted class specifically to use our muted color variable */
+.text-muted {
+    color: var(--muted-color) !important; /* Use !important to ensure it overrides Bootstrap */
+}
+
+
+.activity-row {
+    display: flex; /* Aligns the icon and text side-by-side */
+    align-items: center; /* Vertically centers the content */
+    
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid transparent; /* Start with a transparent border */
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    
+    margin-bottom: 1rem; /* Space between rows */
+    transition: all 0.3s ease;
+}
+
+.activity-row:hover {
+    transform: translateX(10px); /* Moves the row slightly to the right */
+    border-color: var(--gold-main); /* The border glows gold on hover */
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.activity-icon {
+    color: var(--gold-main);
+    font-size: 1.75rem;
+    margin-right: 1.5rem; /* Space between the icon and the text */
+}
+
+/* The title of the activity */
+.activity-text h5 {
+    color: var(--text-color) !important; /* Force the text to be our main white, not gold */
+    font-weight: 700;
+}
+
+/* The description of the activity */
+.activity-text p {
+    color: var(--muted-color); /* Use our standard muted color */
+    line-height: 1.5; /* Slightly tighter line-height for small text blocks */
+}
+
+
+.exco-member-img {
+    transition: transform 0.3s ease;
+}
+
+.exco-member-img:hover {
+    transform: scale(1.1);
+}
+
+/*PERFORMANCES HTML*/
+
+/* ====================================================== */
+/*              PERFORMANCES PAGE STYLES                  */
+/* ====================================================== */
+
+#video-player-frame {
+    overflow: hidden; 
+}
+
+#video-player-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+/* arrow buttons */
+.nav-arrow-btn {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  border: 2px solid rgba(255, 255, 255, 0.5); 
+  color: rgba(255, 255, 255, 0.7);
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.nav-arrow-btn:hover {
+  background-color: #ffd700; 
+  color: #000; 
+  border-color: #ffd700;
+}
+
+/* play button */
+.play-btn-circle {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 !important;
+  border: 2px solid #ffd700; 
+  color: #ffd700; 
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.play-btn-circle:hover {
+  background-color: #ffd700;
+  color: #000;
+}
+
+/* waveform player */
+#waveform-container {
+  position: relative; 
+  height: 150px;
+  width: 700px;
+  margin-left: auto; 
+  margin-right: auto;
+  cursor: pointer;
+  background-image: url('../images/waveform.gif'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(1) invert(1) brightness(2);
+}
+
+.table-dark thead th {
+    color: #ffd700;
+    border-color: rgba(255, 215, 0, 0.3) !important;
+}
+
+/* --- PERFORMANCES PAGE - TRANSITION STYLES --- */
+
+/* This applies a smooth transition to the player frame, title, and description */
+#video-player-frame,
+#performance-title,
+#performance-description {
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* This class will be added by JavaScript to trigger the fade-out */
+.fade-out {
+    opacity: 0;
+}
+/* ====================================================== */
+/*          FINAL: ROUNDED BOX TABLE STYLES               */
+/* ====================================================== */
+#align-head{
+    margin-right: 10px;
+}
+/* This targets the main container for the entire table section */
+#past-performances-table {
+    background-color: rgba(255, 255, 255, 0.05); /* Subtle background */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Light border */
+    border-radius: 1rem; /* Rounded corners for the entire box */
+    padding: 3rem; /* Internal spacing within the box */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2); 
+    margin-bottom: 5rem; 
+    overflow: hidden;
+}
+
+.table thead th {
+    border: none;
+    color: var(--gold-main);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+    padding-bottom: 1rem;
+    vertical-align: middle;
+}
+
+/* Style each table row in the body */
+.table tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+/* The subtle hover effect for the rows */
+.table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.08); /* Slightly lighter background on hover */
+    cursor: pointer;
+}
+
+/* Style the cells within each row */
+.table tbody td {
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* A thin line between rows */
+    padding: 1.5rem 1rem;
+    vertical-align: middle;
+    color: var(--muted-color);
+}
+
+/* We don't need the default Bootstrap hover color */
+.table-hover > tbody > tr:hover > * {
+    --bs-table-accent-bg: transparent; 
+}
+/* --- GLOBAL SMOOTH SCROLLING --- */
+/* Ensures that anchor links scroll smoothly on all pages */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 1px; /* This is the magic! */
+}
+
+/* --- STYLING FOR THE NEW SCROLL DOWN LINK --- */
+.scroll-down-link {
+    color: var(--muted-color); /* Use your defined muted color */
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.scroll-down-link:hover {
+    color: var(--gold-main); /* Link turns gold on hover */
+}
+
+/* The icon within the link */
+.scroll-down-link i {
+    display: block; /* Puts the icon on its own line */
+    font-size: 2rem; /* Makes the chevron icon larger */
+}
+
+
+
+.join-cta-section {
+    padding: 6rem 0;
+    background: url('../images/cta-bg.jpg') no-repeat center center; /* Use a cool, abstract background image */
+    background-size: cover;
+    background-attachment: fixed; /* Creates a nice parallax effect */
+    position: relative;
+    color: white;
+}
+
+/* Dark overlay for readability */
+.join-cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Ensure content is on top of the overlay */
+.join-cta-section .container {
+    position: relative;
+}
+
+/* A bigger, more prominent button for the CTA */
+.btn-cta {
+    padding: 1rem 3rem;
+    font-size: 1.1rem;
+}
+
+/* --- RULE FOR THE ARROW ICON INSIDE CTA BUTTONS --- */
+.btn-cta .bi-arrow-right-short {
+    transition: transform 0.3s ease;
+    vertical-align: middle;
+    font-size: 1.5em;
+}
+.btn-cta:hover .bi-arrow-right-short {
+    transform: translateX(5px);
+}
+
+/* ====================================================== */
+/*                WORKSHOP PAGE STYLES                    */
+/* ====================================================== */
+
+/* This makes the entire box a clickable link */
+.workshop-card-link {
+    display: block;
+    text-decoration: none;
+    height: 100%;
+    color: inherit; /* Makes text inside inherit color from the body */
+}
+
+/* This styles the box itself */
+.workshop-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 2.5rem;
+    border-radius: 1rem;
+    height: 100%;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+/* This creates the hover effect */
+.workshop-card-link:hover .workshop-card {
+    transform: translateY(-10px);
+    border-color: var(--gold-main);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Styling for the icon inside the box */
+.workshop-icon {
+    font-size: 3rem;
+    color: var(--gold-main);
+    margin-bottom: 1.5rem;
+}
+
+/* Styling for the title text inside the box */
+.workshop-title {
+    color: #ffffff !important; /* Force white to stand out from gold headings */
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.workshop-description {
+    color: var(--muted-color);
+}
+
+
+/* --- Workshop Detail Section Styles --- */
+.workshop-detail-section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Removes the border from the very last section */
+.workshop-detail-section:last-child {
+    border-bottom: none;
+}
+
+/* Fix the color of the descriptive text */
+.workshop-detail-section p {
+    color: var(--muted-color);
+}
+
+/* Style the checkmark list for better visual appeal */
+.workshop-detail-section ul {
+    padding-left: 0;
+}
+
+.workshop-detail-section li {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.workshop-detail-section .bi-check-circle-fill {
+    color: #198754; /* Bootstrap's standard green color */
+}
+
+/* --- WORKSHOP TAB STYLES --- */
+
+/* Removes the default button styling */
+.workshop-card-link {
+    background: none;
+    border: none;
+    padding: 0;
+    width: 100%;
+    text-align: left;
+
+    text-decoration: none;
+
+}
+
+/* Style for the ACTIVE tab card */
+.workshop-card-link.active .workshop-card {
+    border-color: var(--gold-main);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+.links {
+    text-decoration: none;
+}
+
+
+/* ====================================================== */
+/*          MINIMAL WORKSHOP SIGN-UP FORM STYLES          */
+/* ====================================================== */
+
+.workshop-signup-form {
+    background-color: rgba(0,0,0,0.2);
+    border-top: 2px solid var(--gold-main);
+    padding: 1.5rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.workshop-signup-form .form-title {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+/* This styles the static "Workshop: Beginner Vocals" text */
+.workshop-display-field {
+    color: var(--muted-color) !important;
+    font-weight: 600;
+}
+
+/* General styling for the input fields */
+.workshop-signup-form .form-control {
+    background-color: rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: var(--text-color);
+}
+
+.workshop-signup-form .form-control::placeholder {
+    color: rgba(255,255,255,0.4);
+}
+
+.workshop-signup-form .form-control:focus {
+    background-color: rgba(0,0,0,0.3);
+    border-color: var(--gold-main);
+    color: var(--text-color);
+    box-shadow: 0 0 0 0.25rem rgba(255, 215, 0, 0.25);
+}
+
+/* ====================================================== */
+/*                CUSTOM MODAL STYLES                     */
+/* ====================================================== */
+.modal-content {
+    background-color: #2c2c2c; /* A slightly lighter dark color for the modal */
+    color: var(--text-color);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.modal-header {
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.modal-footer {
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Style the close 'X' button to be visible on a dark background */
+.btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+
+/* ====================================================== */
+/*          "SEE US IN ACTION" CTA SECTION STYLES         */
+/* ====================================================== */
+
+.see-us-in-action-section {
+    padding: 6rem 0;
+    /* Use a dynamic, performance-related background image */
+    background: url('../images/performance-bg.jpg') no-repeat center center; 
+    background-size: cover;
+    background-attachment: fixed; /* Creates the parallax effect */
+    position: relative;
+    color: white;
+}
+
+/* Dark overlay for text readability */
+.see-us-in-action-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.65); /* A slightly darker overlay */
+}
+
+/* Ensure the text and button are on top of the overlay */
+.see-us-in-action-section .container {
+    position: relative;
+}
+
+/* Styling for the prominent "View Showcases" button */
+.btn-cta-showcase {
+    background-color: transparent;
+    color: var(--gold-main);
+    font-weight: 700;
+    padding: 0.8rem 2.5rem;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: 2px solid var(--gold-main);
+}
+
+.btn-cta-showcase:hover {
+    background-color: var(--gold-main);
+    color: #000;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(255, 215, 0, 0.4);
+}
+
+/* Style the arrow icon inside the button */
+.btn-cta-showcase .bi-arrow-right-short {
+    transition: transform 0.3s ease;
+    vertical-align: middle;
+    font-size: 1.5em; /* Makes the arrow slightly bigger */
+}
+
+.btn-cta-showcase:hover .bi-arrow-right-short {
+    transform: translateX(5px); /* Arrow moves to the right on hover */
+}
+
+
+/* ========================
+   SITE FOOTER STYLES
+   ======================== */
+
+:root {
+  --bg-color: #181818;
+  --text-color: rgba(255, 255, 255, 0.85);
+  --gold-main: #FFD700;
+  --muted-color: rgba(255, 255, 255, 0.6);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Lato', sans-serif;
+    line-height: 1.7;
+} 
+
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../images/padded.png'); /* A subtle texture */
+    opacity: 0.5; /* Make it BARELY visible */
+    z-index: -1; /* Place it behind all content */
+    pointer-events: none;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--gold-main)!important;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* glow effect */
+h1, h2, h3 {
+    text-shadow: 0 0 12px rgba(255, 215, 0, 0.5); 
+}
+
+/* ==================
+   NAVBAR STYLES
+   ================== */
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-family: 'Montserrat', sans-serif; /* A modern, clean font */
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Custom Logo Styling */
+.navbar-brand .brand-main-text {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.navbar-brand .brand-sub-text {
+    font-weight: 400;
+    font-size: 0.7rem;
+    letter-spacing: 4.5px;
+    display: block;
+    line-height: 0.5;
+    margin-left: 2px;
+}
+
+/* Centered Nav Links */
+.navbar-nav {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    color: #ffffff;
+    padding-right: 1.5rem !important;
+    padding-left: 1.5rem !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ffd700; /* Gold on hover */
+}
+
+/* Gold Underline for Active Link   
+1. Style the link text and prepare it for the custom underline */
+
+.nav-link.active {
+    font-weight: 700; /* Bolded text */
+    color: #ffd700 !important; /* Gold text */
+    position: relative; /* Needed for the ::after pseudo-element */
+}
+
+/* The actual underline */
+/* 2. Create the custom underline using a pseudo-element on the span */
+.nav-link.active span::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 1.5rem; /* Change to 0 */
+    right: 1.5rem; /* Change to 0 */
+    height: 3px;
+    background-color: #ffd700;
+}
+
+/* Styling for the dropdown menu */
+.dropdown-menu {
+    border-radius: 0;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    background-color: #1a1a1a;
+}
+
+.dropdown-item {
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.dropdown-item:hover {
+    background-color: #ffd700;
+    color: #000;
+}
+
+
+.dropdown-item.dropdown-item-active:hover {
+    background-color: #e6c300; 
+    color: #000 ;    /* Keep the text black so it's visible when background color changes */
+}
+
+/*=======================================
+ Styling for the active item within a dropdown menu 
+ ====================================================*/
+.dropdown-item-active {
+    color: #ffd700 ; /* Gold text */
+    font-weight: 700;
+    /* The glowing effect */
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
+}
+
+
+/* =======================================
+   CENTER ALIGN NAVBAR DROPDOWN MENU
+   ======================================= */
+
+/* targets dropdown menus ONLY when they are inside the main
+   centered navbar navigation list*/
+.navbar-nav .dropdown-menu {
+    /* 
+      this is the key centering technique for absolutely positioned elements.
+      1. 'left: 50%' pushes the menu's left edge to the center of the parent link.
+      2. 'transform' then pulls the menu back to the left by half of its OWN width.
+    */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* =======================================
+   CUSTOM DROPDOWN DIVIDER
+   ======================================= */
+
+/* This targets the  default black divider in dropdown*/
+.dropdown-menu-dark .dropdown-divider {
+    height: 1px; 
+    margin: 0.5rem 1rem; /* vertical and horizontal spacing */
+    background-color: rgba(255, 255, 255, 0.25); /* A semi-transparent white */
+    border: 0; /* Remove any default border */
+}
+
+
+/* Right Side Elements */
+.navbar-text {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+}
+
+
+
+
+
+
+/* ========================
+   NAVBAR SOCIAL ICONS
+   ======================== */
+.social-icons {
+    display: flex; /* Aligns icons in a row */
+    align-items: center;
+}
+
+.social-icon {
+    color: rgba(255, 255, 255, 0.8); /* A slightly softer white */
+    font-size: 1.5rem; /* Makes the icons larger and easier to click */
+    margin: 0 10px; /* Adds space between the icons */
+    transition: all 0.3s ease-in-out;
+    display: inline-block; /* Required for transform to work properly */
+}
+
+/* On hover, change color to gold and add a subtle "pop" effect */
+.social-icon:hover {
+    color: #ffd700; /* Gold color */
+    transform: scale(1.15) translateY(-2px); /* Makes the icon slightly bigger and lifts it */
+}
+
+
+
+
+
+/* Responsive adjustments for a cleaner look on medium screens */
+@media (max-width: 1200px) {
+    .navbar-text {
+        display: none; /* Hide phone number on smaller screens to prevent clutter */
+    }
+}
+
+.btn-primary { 
+    background-color: #ffd700; 
+    border-color: #ffd700; 
+    color: #000; 
+} 
+
+.btn-primary:hover { 
+    background-color: #e6c300; 
+    border-color: #e6c300; 
+}
+
+
+
+/*===============
+END OF NAV
+ ================= */
+
+
+
+
+
+
+
+/* --- PARALLAX BANNER --- */
+
+.parallax-container {
+  height: 70vh; 
+  overflow-x: hidden;
+  perspective: 1px;
+}
+
+.parallax-background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  
+  background-image: url('../images/soundcardbg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 40%;
+
+}
+
+.parallax-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: white;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+
+#first-section-after-hero {
+    background-color: #111; 
+    border-top: 4px solid #ffd700; 
+    padding-top: 5rem; 
+}
+
+
+
+/* profile images */
+.profile-image {
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  width: 100%; /* Let the column control the width */
+  max-width: 400px; /* Set a max-width instead */
+  aspect-ratio: 3 / 4; /* Maintains a consistent shape */
+}
+
+/* quote block */
+.blockquote {
+  color: #ffffff;
+  font-size: 1.1rem; /* Makes the quote text slightly larger */
+  font-style: italic;
+  border-left: 4px solid var(--gold-main); /* Match your theme! */
+  padding-left: 1.5rem;
+}
+
+/* small EXCO member images  */
+.exco-member-img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover; /* This ensures the photo fills the circle without distortion */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+}
+
+
+
+/* Target the text-muted class specifically to use our muted color variable */
+.text-muted {
+    color: var(--muted-color) !important; /* Use !important to ensure it overrides Bootstrap */
+}
+
+
+.activity-row {
+    display: flex; /* Aligns the icon and text side-by-side */
+    align-items: center; /* Vertically centers the content */
+    
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid transparent; /* Start with a transparent border */
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    
+    margin-bottom: 1rem; /* Space between rows */
+    transition: all 0.3s ease;
+}
+
+.activity-row:hover {
+    transform: translateX(10px); /* Moves the row slightly to the right */
+    border-color: var(--gold-main); /* The border glows gold on hover */
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.activity-icon {
+    color: var(--gold-main);
+    font-size: 1.75rem;
+    margin-right: 1.5rem; /* Space between the icon and the text */
+}
+
+/* The title of the activity */
+.activity-text h5 {
+    color: var(--text-color) !important; /* Force the text to be our main white, not gold */
+    font-weight: 700;
+}
+
+/* The description of the activity */
+.activity-text p {
+    color: var(--muted-color); /* Use our standard muted color */
+    line-height: 1.5; /* Slightly tighter line-height for small text blocks */
+}
+
+
+.exco-member-img {
+    transition: transform 0.3s ease;
+}
+
+.exco-member-img:hover {
+    transform: scale(1.1);
+}
+
+/*PERFORMANCES HTML*/
+
+/* ====================================================== */
+/*              PERFORMANCES PAGE STYLES                  */
+/* ====================================================== */
+
+#video-player-frame {
+    overflow: hidden; 
+}
+
+#video-player-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+/* arrow buttons */
+.nav-arrow-btn {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  border: 2px solid rgba(255, 255, 255, 0.5); 
+  color: rgba(255, 255, 255, 0.7);
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.nav-arrow-btn:hover {
+  background-color: #ffd700; 
+  color: #000; 
+  border-color: #ffd700;
+}
+
+/* play button */
+.play-btn-circle {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 !important;
+  border: 2px solid #ffd700; 
+  color: #ffd700; 
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.play-btn-circle:hover {
+  background-color: #ffd700;
+  color: #000;
+}
+
+/* waveform player */
+#waveform-container {
+  position: relative; 
+  height: 150px;
+  width: 700px;
+  margin-left: auto; 
+  margin-right: auto;
+  cursor: pointer;
+  background-image: url('../images/waveform.gif'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(1) invert(1) brightness(2);
+}
+
+.table-dark thead th {
+    color: #ffd700;
+    border-color: rgba(255, 215, 0, 0.3) !important;
+}
+
+/* --- PERFORMANCES PAGE - TRANSITION STYLES --- */
+
+/* This applies a smooth transition to the player frame, title, and description */
+#video-player-frame,
+#performance-title,
+#performance-description {
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* This class will be added by JavaScript to trigger the fade-out */
+.fade-out {
+    opacity: 0;
+}
+/* ====================================================== */
+/*          FINAL: ROUNDED BOX TABLE STYLES               */
+/* ====================================================== */
+#align-head{
+    margin-right: 10px;
+}
+/* This targets the main container for the entire table section */
+#past-performances-table {
+    background-color: rgba(255, 255, 255, 0.05); /* Subtle background */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Light border */
+    border-radius: 1rem; /* Rounded corners for the entire box */
+    padding: 3rem; /* Internal spacing within the box */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2); 
+    margin-bottom: 5rem; 
+    overflow: hidden;
+}
+
+.table thead th {
+    border: none;
+    color: var(--gold-main);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+    padding-bottom: 1rem;
+    vertical-align: middle;
+}
+
+/* Style each table row in the body */
+.table tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+/* The subtle hover effect for the rows */
+.table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.08); /* Slightly lighter background on hover */
+    cursor: pointer;
+}
+
+/* Style the cells within each row */
+.table tbody td {
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* A thin line between rows */
+    padding: 1.5rem 1rem;
+    vertical-align: middle;
+    color: var(--muted-color);
+}
+
+/* We don't need the default Bootstrap hover color */
+.table-hover > tbody > tr:hover > * {
+    --bs-table-accent-bg: transparent; 
+}
+/* --- GLOBAL SMOOTH SCROLLING --- */
+/* Ensures that anchor links scroll smoothly on all pages */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 1px; /* This is the magic! */
+}
+
+/* --- STYLING FOR THE NEW SCROLL DOWN LINK --- */
+.scroll-down-link {
+    color: var(--muted-color); /* Use your defined muted color */
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.scroll-down-link:hover {
+    color: var(--gold-main); /* Link turns gold on hover */
+}
+
+/* The icon within the link */
+.scroll-down-link i {
+    display: block; /* Puts the icon on its own line */
+    font-size: 2rem; /* Makes the chevron icon larger */
+}
+
+
+
+.join-cta-section {
+    padding: 6rem 0;
+    background: url('../images/cta-bg.jpg') no-repeat center center; /* Use a cool, abstract background image */
+    background-size: cover;
+    background-attachment: fixed; /* Creates a nice parallax effect */
+    position: relative;
+    color: white;
+}
+
+/* Dark overlay for readability */
+.join-cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Ensure content is on top of the overlay */
+.join-cta-section .container {
+    position: relative;
+}
+
+/* A bigger, more prominent button for the CTA */
+.btn-join-now-cta {
+    background-color: var(--gold-main);
+    color: #000;
+    font-weight: 700;
+    padding: 1rem 3rem;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn-join-now-cta:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(255, 215, 0, 0.4);
+}
+
+/* ====================================================== */
+/*                WORKSHOP PAGE STYLES                    */
+/* ====================================================== */
+
+/* This makes the entire box a clickable link */
+.workshop-card-link {
+    display: block;
+    text-decoration: none;
+    height: 100%;
+    color: inherit; /* Makes text inside inherit color from the body */
+}
+
+/* This styles the box itself */
+.workshop-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 2.5rem;
+    border-radius: 1rem;
+    height: 100%;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+/* This creates the hover effect */
+.workshop-card-link:hover .workshop-card {
+    transform: translateY(-10px);
+    border-color: var(--gold-main);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Styling for the icon inside the box */
+.workshop-icon {
+    font-size: 3rem;
+    color: var(--gold-main);
+    margin-bottom: 1.5rem;
+}
+
+/* Styling for the title text inside the box */
+.workshop-title {
+    color: #ffffff !important; /* Force white to stand out from gold headings */
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.workshop-description {
+    color: var(--muted-color);
+}
+
+
+/* --- Workshop Detail Section Styles --- */
+.workshop-detail-section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Removes the border from the very last section */
+.workshop-detail-section:last-child {
+    border-bottom: none;
+}
+
+/* Fix the color of the descriptive text */
+.workshop-detail-section p {
+    color: var(--muted-color);
+}
+
+/* Style the checkmark list for better visual appeal */
+.workshop-detail-section ul {
+    padding-left: 0;
+}
+
+.workshop-detail-section li {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.workshop-detail-section .bi-check-circle-fill {
+    color: #198754; /* Bootstrap's standard green color */
+}
+
+/* --- WORKSHOP TAB STYLES --- */
+
+/* Removes the default button styling */
+.workshop-card-link {
+    background: none;
+    border: none;
+    padding: 0;
+    width: 100%;
+    text-align: left;
+
+    text-decoration: none;
+
+}
+
+/* Style for the ACTIVE tab card */
+.workshop-card-link.active .workshop-card {
+    border-color: var(--gold-main);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+.links {
+    text-decoration: none;
+}
+
+
+/* ====================================================== */
+/*          MINIMAL WORKSHOP SIGN-UP FORM STYLES          */
+/* ====================================================== */
+
+.workshop-signup-form {
+    background-color: rgba(0,0,0,0.2);
+    border-top: 2px solid var(--gold-main);
+    padding: 1.5rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.workshop-signup-form .form-title {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+/* This styles the static "Workshop: Beginner Vocals" text */
+.workshop-display-field {
+    color: var(--muted-color) !important;
+    font-weight: 600;
+}
+
+/* General styling for the input fields */
+.workshop-signup-form .form-control {
+    background-color: rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: var(--text-color);
+}
+
+.workshop-signup-form .form-control::placeholder {
+    color: rgba(255,255,255,0.4);
+}
+
+.workshop-signup-form .form-control:focus {
+    background-color: rgba(0,0,0,0.3);
+    border-color: var(--gold-main);
+    color: var(--text-color);
+    box-shadow: 0 0 0 0.25rem rgba(255, 215, 0, 0.25);
+}
+
+/* ====================================================== */
+/*                CUSTOM MODAL STYLES                     */
+/* ====================================================== */
+.modal-content {
+    background-color: #2c2c2c; /* A slightly lighter dark color for the modal */
+    color: var(--text-color);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.modal-header {
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.modal-footer {
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Style the close 'X' button to be visible on a dark background */
+.btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+
+/* ====================================================== */
+/*          "SEE US IN ACTION" CTA SECTION STYLES         */
+/* ====================================================== */
+
+.see-us-in-action-section {
+    padding: 6rem 0;
+    /* Use a dynamic, performance-related background image */
+    background: url('../images/performance-bg.jpg') no-repeat center center; 
+    background-size: cover;
+    background-attachment: fixed; /* Creates the parallax effect */
+    position: relative;
+    color: white;
+}
+
+/* Dark overlay for text readability */
+.see-us-in-action-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.65); /* A slightly darker overlay */
+}
+
+/* Ensure the text and button are on top of the overlay */
+.see-us-in-action-section .container {
+    position: relative;
+}
+
+/* Styling for the prominent "View Showcases" button */
+.btn-cta-showcase {
+    background-color: transparent;
+    color: var(--gold-main);
+    font-weight: 700;
+    padding: 0.8rem 2.5rem;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: 2px solid var(--gold-main);
+}
+
+.btn-cta-showcase:hover {
+    background-color: var(--gold-main);
+    color: #000;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(255, 215, 0, 0.4);
+}
+
+/* Style the arrow icon inside the button */
+.btn-cta-showcase .bi-arrow-right-short {
+    transition: transform 0.3s ease;
+    vertical-align: middle;
+    font-size: 1.5em; /* Makes the arrow slightly bigger */
+}
+
+.btn-cta-showcase:hover .bi-arrow-right-short {
+    transform: translateX(5px); /* Arrow moves to the right on hover */
+}
+
+
+/* ========================
+   SITE FOOTER STYLES
+   ======================== */
+.site-footer {
+    background-color: #1a1a1a;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 40px 0 20px 0;
+    font-size: 0.9rem;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.footer-links a:hover {
+    color: #ffd700;
+}
+
+.footer-social-icons a {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.5rem;
+    margin-left: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.footer-social-icons a:hover {
+    color: #ffd700;
+}
+
+.footer-divider {
+    border-color: rgba(255, 255, 255, 0.15);
+    margin: 20px 0;
+}
+
+.footer-copyright {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+
+
+/* ========================
+   SITE FOOTER STYLES   END
+   ======================== */

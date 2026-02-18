@@ -1,0 +1,1050 @@
+body { 
+    background-color: #000; 
+    color: #fff; 
+    font-family: 'Roboto', sans-serif; 
+} 
+
+header { 
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('singing-background.jpg') no-repeat center center/cover; 
+    padding: 100px 0; 
+} 
+
+
+
+
+
+/* ==================
+   NAVBAR STYLES
+   ================== */
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-family: 'Montserrat', sans-serif; /* A modern, clean font */
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Custom Logo Styling */
+.navbar-brand .brand-main-text {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.navbar-brand .brand-sub-text {
+    font-weight: 400;
+    font-size: 0.7rem;
+    letter-spacing: 4.5px;
+    display: block;
+    line-height: 0.5;
+    margin-left: 2px;
+}
+
+/* Centered Nav Links */
+.navbar-nav {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    color: #ffffff;
+    padding-right: 1.5rem !important;
+    padding-left: 1.5rem !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ffd700; /* Gold on hover */
+}
+
+/* Gold Underline for Active Link   
+1. Style the link text and prepare it for the custom underline */
+
+.nav-link.active {
+    font-weight: 700; /* Bolded text */
+    color: #ffd700 !important; /* Gold text */
+    position: relative; /* Needed for the ::after pseudo-element */
+}
+
+/* The actual underline */
+/* 2. Create the custom underline using a pseudo-element on the span */
+.nav-link.active span::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 1.5rem; /* Change to 0 */
+    right: 1.5rem; /* Change to 0 */
+    height: 3px;
+    background-color: #ffd700;
+}
+
+/* Styling for the dropdown menu */
+.dropdown-menu {
+    border-radius: 0;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    background-color: #1a1a1a;
+}
+
+.dropdown-item {
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.dropdown-item:hover {
+    background-color: #ffd700;
+    color: #000;
+}
+
+
+.dropdown-item.dropdown-item-active:hover {
+    background-color: #e6c300; 
+    color: #000 ;    /* Keep the text black so it's visible when background color changes */
+}
+
+/*=======================================
+ Styling for the active item within a dropdown menu 
+ ====================================================*/
+.dropdown-item-active {
+    color: #ffd700 ; /* Gold text */
+    font-weight: 700;
+    /* The glowing effect */
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
+}
+
+
+/* =======================================
+   CENTER ALIGN NAVBAR DROPDOWN MENU
+   ======================================= */
+
+/* targets dropdown menus ONLY when they are inside the main
+   centered navbar navigation list*/
+.navbar-nav .dropdown-menu {
+    /* 
+      this is the key centering technique for absolutely positioned elements.
+      1. 'left: 50%' pushes the menu's left edge to the center of the parent link.
+      2. 'transform' then pulls the menu back to the left by half of its OWN width.
+    */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* =======================================
+   CUSTOM DROPDOWN DIVIDER
+   ======================================= */
+
+/* This targets the  default black divider in dropdown*/
+.dropdown-menu-dark .dropdown-divider {
+    height: 1px; 
+    margin: 0.5rem 1rem; /* vertical and horizontal spacing */
+    background-color: rgba(255, 255, 255, 0.25); /* A semi-transparent white */
+    border: 0; /* Remove any default border */
+}
+
+
+/* Right Side Elements */
+.navbar-text {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+}
+
+
+
+
+
+
+/* ========================
+   NAVBAR SOCIAL ICONS
+   ======================== */
+.social-icons {
+    display: flex; /* Aligns icons in a row */
+    align-items: center;
+}
+
+.social-icon {
+    color: rgba(255, 255, 255, 0.8); /* A slightly softer white */
+    font-size: 1.5rem; /* Makes the icons larger and easier to click */
+    margin: 0 10px; /* Adds space between the icons */
+    transition: all 0.3s ease-in-out;
+    display: inline-block; /* Required for transform to work properly */
+}
+
+/* On hover, change color to gold and add a subtle "pop" effect */
+.social-icon:hover {
+    color: #ffd700; /* Gold color */
+    transform: scale(1.15) translateY(-2px); /* Makes the icon slightly bigger and lifts it */
+}
+
+
+
+
+.btn-join-now {
+    background-color: #f1f1f1; /* Off-white button */
+    color: #000000;
+    font-weight: 700;
+    padding: 12px 30px;
+    border-radius: 50px; /* Pill shape */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.btn-join-now:hover {
+    background-color: #ffd700;
+    color: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3);
+}
+
+
+
+
+/* Responsive adjustments for a cleaner look on medium screens */
+@media (max-width: 1200px) {
+    .navbar-text {
+        display: none; /* Hide phone number on smaller screens to prevent clutter */
+    }
+}
+
+.btn-primary { 
+    background-color: #ffd700; 
+    border-color: #ffd700; 
+    color: #000; 
+} 
+
+.btn-primary:hover { 
+    background-color: #e6c300; 
+    border-color: #e6c300; 
+}
+
+/*===============
+    END OF NAV
+ ================= */
+
+
+
+/*===============
+    HERO SECTION 
+ ================= */
+
+.hero-section {
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/singer-background.jpeg');
+    background-size: cover;
+    background-position: center center;
+    color: #ffffff;
+    transition: background-image 1s ease-in-out;
+}
+
+.hero-content {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.2); /* Subtle dark background for text readability */
+    border-radius: 8px; /* Material Design inspired rounded corners */
+}
+
+.hero-content .club-tagline {
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    background-color: rgba(0,0,0,0.7);
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+
+.hero-content .hero-title {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero-title .highlight-text {
+    color: #ffd700; /* Golden Yellow */
+}
+
+.hero-content .lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+.hero-content .keywords {
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-top: 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.btn-join-now {
+    background-color: #000000; /* Black button */
+    color: #ffd700; /* Golden Yellow text */
+    font-weight: 700;
+    padding: 12px 30px;
+    border-radius: 50px; /* Pill-shaped button */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    border: 2px solid #ffd700; /* Golden border */
+}
+
+.btn-join-now:hover {
+    background-color: #ffd700; /* Golden Yellow on hover */
+    color: #000000; /* Black text on hover */
+    transform: translateY(-3px); /* Subtle lift effect */
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+}
+
+
+/*======================
+    END OF HERO SECTION 
+ ======================= */
+
+
+/*==========================
+ COUNTDOWN SECTION STYLES 
+==========================*/
+
+#countdown-section {
+    background-color: #1F1F1F; /* Dark blue-purple background */
+    /* Subtle pattern inspired by the image */
+    background-image:
+        radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.1) 1px, transparent 0);
+    background-size: 20px 20px;
+    padding: 80px 0;
+    overflow: hidden; /* Ensures contained elements look clean */
+}
+
+.timer-box {
+    background-color: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    width: 120px;
+    height: 120px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.timer-box:hover {
+    transform: translateY(-5px);
+}
+
+.timer-box span {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.timer-box p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+}
+
+.are-you-ready {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.btn-join-workshop {
+    background: #000;
+    color: #ffd700;
+    border: 2px solid #ffd700;
+    border-radius: 50px;
+    padding: 15px 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-join-workshop:hover {
+    background-color: #ffd700;
+    color: #000;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+}
+
+.workshop-info-box {
+    background: rgba(255, 255, 255, 0.05); /* Transparent white for glassy effect */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+    backdrop-filter: blur(10px); /* The key to the frosted glass look */
+    -webkit-backdrop-filter: blur(10px); /* For Safari support */
+}
+
+.workshop-info-box .info-title {
+    font-weight: 700;
+    color: #ffd700; /* Gold color for titles */
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.workshop-info-box .info-text {
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 1.1rem;
+}
+
+
+
+
+/* ==================
+   LOADER STYLES
+   ================== */
+#loader {
+    position: fixed; /* Sit on top of all content */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffd700; /* Golden yellow background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure it's on the very top */
+    /* This transition will be used to fade out the loader */
+    transition: opacity 0.75s ease;
+}
+
+/* This class will be added by JavaScript to hide the loader */
+#loader.hidden {
+    opacity: 0;
+    pointer-events: none; /* Disables interaction when hidden */
+}
+
+.vinyl-spinner {
+    width: 100px;
+    height: 100px;
+    background-color: #111; /* Dark vinyl color */
+    border-radius: 50%; /* Makes it a circle */
+    position: relative;
+    /* The spinning animation: 'spin' is the animation name, 1.2s is the duration,
+       'linear' is the timing, 'infinite' means it loops forever */
+    animation: spin 1.2s linear infinite;
+    /* Creating the vinyl grooves with box-shadows */
+    box-shadow:
+        inset 0 0 0 5px rgba(255, 255, 255, 0.1), /* Inner groove */
+        inset 0 0 0 10px rgba(0, 0, 0, 0.2),       /* Darker ring */
+        inset 0 0 0 15px rgba(255, 255, 255, 0.1), /* Second groove */
+        inset 0 0 0 20px rgba(0, 0, 0, 0.2),
+        inset 0 0 0 25px rgba(255, 255, 255, 0.1);
+}
+
+/* Creating the center label of the vinyl */
+.vinyl-spinner::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25px;
+    height: 25px;
+    background-color: #ffd700; /* Center label matches the background */
+    border-radius: 50%;
+    border: 3px solid #111; /* Border to separate it from the vinyl body */
+}
+
+/* Defines the keyframes for the spinning animation */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/*===============
+Spinner end
+================*/
+
+
+
+
+
+
+
+/*===============
+WORKSHOP PICTURE HOVER POPUP START
+================*/
+
+
+/* The main container that holds the trigger image and the pop-up card.
+   Position: relative is CRUCIAL for positioning the absolute pop-up card inside it. */
+.workshop-preview-container {
+    position: relative;
+    display: inline-block; /* Ensures the container only takes up the width of its content */
+}
+
+/* The trigger image that the user hovers over */
+.workshop-trigger-img {
+    width: 260px; /* Approx. width of two timer boxes (120px + 120px + margins) */
+    border-radius: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    cursor: pointer; /* Changes the mouse to a pointer to indicate interactivity */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* A subtle lift and glow effect when hovering the trigger image */
+.workshop-trigger-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+/* The pop-up card, styled to look like your example */
+.workshop-popup-card {
+    /* --- Positioning --- */
+    position: absolute; /* Positions the card relative to the container */
+    top: 50%;
+    left: 100%; /* Places the card to the right of the container */
+    transform: translate(20px, -50%); /* Moves it 20px right and centers it vertically */
+
+    /* --- Appearance --- */
+    width: 320px;
+    background-color: #2c2c3e; /* Dark theme color */
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+
+    /* --- Initial State (HIDDEN) --- */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none; /* Prevents interaction with the hidden card */
+    transition: opacity 0.4s ease, transform 0.4s ease; /* Smooth fade and move animation */
+}
+
+/* hover over the CONTAINER, the pop-up card appears. */
+.workshop-popup-card.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(30px, -50%);
+}
+
+
+/* Styling for the content inside the pop-up card */
+.workshop-popup-card .popup-logo {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 15px;
+}
+
+.workshop-popup-card h4 {
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.workshop-popup-card p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* =======================================
+   WELCOME & EVENTS SECTION STYLES
+   ======================================= */
+
+.welcome-section {
+    background-color: #111; /* A consistent dark background */
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* Style for reusable section titles */
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #ffd700;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.welcome-headline {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+
+
+.welcome-section .lead {
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.events-card {
+    background-color: #1a1a1a;
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid #333;
+}
+
+.events-card .card-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+
+.events-card .btn-join-now {
+    padding: 10px 24px; /* Reduced padding */
+    font-size: 0.9rem; /* Smaller font */
+}
+
+
+/* ========================
+   APPLICATION FORM STYLES
+   ======================== */
+
+/* =======================================
+   HEADER FOR JOIN US (MEMBERSHIP) PAGE */
+
+/* This targets the .page-header ONLY when it is inside #join-us-page */
+#join-us-page .page-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/join-us-thumbnail.jpeg");
+    
+    background-size: cover;
+    background-position: 50% 80%;
+    background-repeat: no-repeat;
+    
+    color: #fff;
+    padding: 130px 0;
+    text-align: center;
+}
+
+
+
+/* ========================
+   APPLICATION FORM STYLES
+   ======================== */
+#application-section {
+    background-color: #111;
+}
+
+#membership-form {
+    background-color: #1a1a1a;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Style for labels */
+.form-label {
+    color: #ffd700;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* Style for input fields */
+.form-control, .form-select {
+    background-color: #252a34; /* lighter colour field for contrast */
+    border: 2px solid #4a4e5a;  /* lighter border for contrast */
+    color: #fff;
+    padding: 1rem; /* Increase padding for a more spacious feel */
+    border-radius: 12px; /* Add rounded corners to match the image */
+    transition: all 0.3s ease;
+}
+.form-control:focus, .form-select:focus {
+    background-color: #2c2c3e;
+    color: #fff;
+    border-color: #ffd700;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+/* Style for the validation error messages */
+.error-message {
+    color: #dc3545;
+    font-size: 0.875em;
+    margin-top: 0.25rem;
+    font-weight: 500;
+}
+.form-control.is-invalid {
+    border-color: #dc3545;
+}
+
+
+/* Base styles for buttons in BOTH the form and the modal */
+#application-section .btn,
+#submissionModal .btn {
+    padding: 12px 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+/* Primary "Submit", "Confirm", & "OK" Button */
+#application-section .btn-primary,
+#submissionModal .btn-primary {
+    background-color: #ffd700;
+    border-color: #ffd700;
+    color: #000;
+}
+
+#application-section .btn-primary:hover,
+#submissionModal .btn-primary:hover {
+    background-color: #e6c300;
+    border-color: #e6c300;
+    transform: translateY(-2px);
+}
+
+/* Secondary "Clear Form" & "Edit" Button */
+#application-section .btn-secondary,
+#submissionModal .btn-secondary {
+    background-color: transparent;
+    border-color: #888;
+    color: #ccc;
+}
+
+#application-section .btn-secondary:hover,
+#submissionModal .btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #aaa;
+    color: #fff;
+}
+
+/* Dark theme for the success pop-up modal */
+.modal-content {
+    background-color: #1a1a1a;
+    color: #fff;
+    border: 1px solid #ffd700;
+}
+.modal-header, .modal-footer {
+    border-color: #333;
+}
+.modal-header .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+
+
+
+/* Red error feedback text*/
+.error-message {
+    color: #dc3545; 
+    font-size: 0.875em;
+    margin-top: 0.25rem;
+    font-weight: 700; /* Bold */
+}
+.form-control.is-invalid {
+    border-color: #dc3545;
+}
+
+/* Styling for the summary list in the modal */
+.summary-list {
+    list-style: none;
+    padding: 0;
+}
+.summary-list li {
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+}
+.summary-list strong {
+    color: #ffd700; /* Gold color for the labels */
+    display: inline-block;
+    width: 120px; /* Aligns the text nicely */
+}
+
+/* callender icon styling*/
+input[type="date"]::-webkit-calendar-picker-indicator {
+    /* 'invert(1)' will change dark colors to light ones.  */
+    filter: invert(1);
+    
+    /* good practice to make it clear the icon is clickable */
+    cursor: pointer;
+
+    /* add a subtle fade on hover for feedback */
+    transition: opacity 0.3s ease;
+}
+
+/* Make the icon slightly transparent when hovered over it */
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+    opacity: 0.8;
+}
+
+
+/*styling arrow on select dropdown --- */
+
+.form-select {
+    /* hide the default dark browser arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    /* have to add  own custom arrow as a background image.
+       import SVG for a white chevron arrow. */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+    
+    /* positioning new arrow correctly */
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 16px 12px;
+}
+
+
+
+/* =============================
+   APPLICATION FORM STYLES END
+   =============================*/
+
+
+
+
+
+
+/* ========================
+   FAQ PAGE STYLES
+   ======================== */
+#faq-page {
+    background-color: #111;
+    min-height: 100vh;
+}
+
+#faq-header-section {
+    /* Set the background image for the FAQ page */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/faq-thumbnail.jpg");
+    
+    /* Copied layout styles */
+    background-size: cover;
+    background-position: 50% 20%;
+    background-repeat: no-repeat;
+    
+    color: #fff;
+    padding: 150px 0;
+    text-align: center;
+}
+
+
+
+
+
+/* Search Bar Styling */
+#faq-search-input {
+    background-color: #2c2c3e;
+    color: #fff;
+    border: 1px solid #444;
+}
+#faq-search-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+#faq-search-input:focus {
+    background-color: #2c2c3e;
+    color: #fff;
+    border-color: #ffd700;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+/* Accordion Styling */
+.accordion-item {
+    background-color: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 1rem;
+    border-radius: 8px !important; /* Use !important to override Bootstrap's flush style */
+    overflow: hidden; /* Ensures border-radius applies to children */
+}
+.accordion-header button {
+    background-color: #252a34;
+    color: #fff;
+    font-weight: 600;
+}
+.accordion-header button:not(.collapsed) {
+    background-color: #2c2c3e;
+    color: #ffd700; /* Gold when open */
+    box-shadow: none;
+}
+.accordion-header button:focus {
+    box-shadow: none;
+    border-color: rgba(0,0,0,.125);
+}
+.accordion-header button::after { /* Styles the dropdown arrow */
+    filter: invert(1) grayscale(1) brightness(2);
+}
+.accordion-body {
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.7;
+}
+
+
+/* ========================
+   FAQ PAGE STYLES END
+   ======================== */
+
+
+
+
+
+
+/* ========================
+   FIND US PAGE STYLES
+   ======================== */
+
+#find-us-page .page-header {
+    background-color: #0d1b2a; /* very dark blue */
+    color: #fff;
+    padding: 60px 0;
+}
+
+
+#find-us-page .page-header {
+    /* The linear-gradient is layered on TOP of the image url */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/find-us-thumbnail.jpg");
+    background-size: cover;
+    background-position: 50% 15%;
+    background-repeat: no-repeat;
+    
+    color: #fff;
+    padding: 130px 0;
+}
+
+
+#find-us-page .contact-main-section {
+    background-color: #111;
+}
+
+#find-us-page .section-title {
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.contact-info-list .contact-info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+.contact-info-list .contact-info-item i {
+    font-size: 1.25rem;
+    color: #ffd700;
+    width: 40px;
+    text-align: center;
+    margin-top: 5px;
+}
+.contact-info-list .contact-info-item p {
+    margin-bottom: 0;
+}
+
+#contact-form {
+    background-color: #1a1a1a;
+    padding: 2rem;
+    border-radius: 15px;
+}
+
+
+.dm-separator {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.dm-icon {
+    font-size: 2.5rem; /* Make the icon large and clickable */
+    color: #fff;
+    transition: all 0.3s ease;
+}
+.dm-icon:hover {
+    color: #ffd700; /* Gold on hover */
+    transform: scale(1.1);
+}
+
+.separator-line {
+    width: 40px; /* Match the approximate width of the icon */
+    height: 2px;
+    background-color: #ffd700; /* Gold color */
+    margin: 1rem auto; /* 1rem top/bottom, auto left/right for centering */
+    border-radius: 2px;
+}
+
+.separator-text {
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.map-section {
+    background-color: #111;
+}
+
+#map-container iframe {
+    border-radius: 15px;
+    transition: filter 0.3s ease;
+}
+
+
+/* ========================
+   FIND US PAGE STYLES END
+   ======================== */
+
+
+
+
+
+
+
+
+
+/* ========================
+   SITE FOOTER STYLES
+   ======================== */
+.site-footer {
+    background-color: #1a1a1a;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 40px 0 20px 0;
+    font-size: 0.9rem;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.footer-links a:hover {
+    color: #ffd700;
+}
+
+.footer-social-icons a {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.5rem;
+    margin-left: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.footer-social-icons a:hover {
+    color: #ffd700;
+}
+
+.footer-divider {
+    border-color: rgba(255, 255, 255, 0.15);
+    margin: 20px 0;
+}
+
+.footer-copyright {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+/* ========================
+   SITE FOOTER STYLES   END
+   ======================== */

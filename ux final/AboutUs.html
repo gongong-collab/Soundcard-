@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About Us - NYP SoundCard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles/style.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+ 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+ <body>
+    <div id="loader">
+        <div class="vinyl-spinner"></div>
+    </div>
+<!--Navbar Start-->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/images.png" alt="Soundcard Club Logo" width="50" height="50" class="me-2">
+                <div>
+                    <span class="brand-main-text">SOUNDCARD</span><br>
+                    <span class="brand-sub-text">CLUB</span>
+                </div>
+            </a>
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav mx-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" id="activitiesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span>About us</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="activitiesDropdown">
+                                <li><a class="dropdown-item" href="index.html">What we do</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item dropdown-item-active" href="AboutUs.html">Why join us</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="activitiesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span>Activities</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="activitiesDropdown">
+                                <li><a class="dropdown-item" href="Workshop.html">Workshops</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="Performances.html">Showcases</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <!-- Text is now wrapped in a span. 'active' class on the <a> is for the underline. -->
+                            <a class="nav-link dropdown-toggle" href="#" id="getStartedDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span>Get Started</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="getStartedDropdown">
+                                <!-- The 'dropdown-item-active' class on the <li><a> is for the glow -->
+                                <li><a class="dropdown-item " href="membership-application.html">Join us</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+
+                            <a class="nav-link" href="find-us.html">Find Us</a>
+                        </li>
+                    </ul>
+
+                <!-- Right side elements -->
+                <div class="d-flex align-items-center navbar-right-elements">
+                    <div class="social-icons me-3">                                               <!--target="_blank"  opens link in separate browser tab."--> 
+                        <a href="https://www.youtube.com/channel/UCYNP0fi2xeucYqFzz6lB1Pw/featured" target="_blank" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/nypsoundcard/?hl=en" target="_blank" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/NYPSoundCard/" target="_blank" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                    
+                    <a href="membership-application.html" class="btn btn-join-now">Join Now</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+<!--Navbar End-->
+
+        <section id="Banner">
+        <div class="parallax-container">
+            <div class="parallax-background"></div>
+            <div class="parallax-content container text-center">
+                <h1 class="display-4">We Are NYP SoundCard</h1>
+                <p class="lead">A Family of Voices. A Passion for Music.</p>
+            </div>
+        </div>
+        </section>
+
+        <section id="What">
+            <!-- ====================================================== -->
+            <!--                   WHAT WE DO SECTION                   -->
+            <!-- ====================================================== -->
+            <div class="container my-5">
+                <div class="row align-items-center">
+                        
+                    <!-- Left Side: Descriptive Text -->
+                    <div class="col-lg-6">
+                        <h2 class="display-5 fw-bold mb-3">Want to Sing Like Your Favourite Artists?</h2>
+                        <p class="lead mb-4">We give you the tools, the community, and the stage to make it happen.</p>
+
+                        <!-- This is our new decorative divider -->
+                        <div class="gold-divider"></div>
+
+                        <p class="mt-4">
+                            Our weekly sessions are a blend of structured training and relaxed, collaborative practice. Whether you're a beginner learning to hold a note or an experienced singer looking for a group to jam with, you'll find your place here.
+                        </p>
+                    </div>
+
+                        
+                    <!-- Right Side: Key Activities List -->
+                    <div class="col-lg-5 offset-lg-1">
+                        <ul class="list-unstyled">
+                            <!-- Activity 1 -->
+                            <li class="activity-row">
+                                <div class="activity-icon">
+                                    <i class="bi bi-music-note-beamed"></i>
+                                </div>
+                                <div class="activity-text">
+                                    <h5 class="mb-1">Weekly Vocal Sessions</h5>
+                                    <p class="mb-0">Group training on technique, harmony, and performance.</p>
+                                </div>
+                            </li>
+
+                            <!-- Activity 2 -->
+                            <li class="activity-row">
+                                <div class="activity-icon">
+                                    <i class="bi bi-mic-fill"></i>
+                                </div>
+                                <div class="activity-text">
+                                    <h5 class="mb-1">Open Mic Nights</h5>
+                                    <p class="mb-0">A casual and supportive space to perform solo or with friends.</p>
+                                </div>
+                            </li>
+
+                            <!-- Activity 3 -->
+                            <li class="activity-row">
+                                <div class="activity-icon">
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <div class="activity-text">
+                                    <h5 class="mb-1">Campus Showcases</h5>
+                                    <p class="mb-0">Opportunities to perform at major school events like Open House.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+        </section>
+
+        <section id="Why">
+    <!-- ====================================================== -->
+    <!--                  WHY JOIN US SECTION                   -->
+    <!-- ====================================================== -->
+    <!-- This single container has the ID, the fade-in class, AND the content -->
+    <div class="container my-5 fade-in-element" id="first-section-after-hero">
+        <h2 class="text-center mb-5">Why Join Us?</h2>
+        <div class="row text-center">
+
+            <!-- Benefit 1: Hone Your Craft -->
+            <div class="col-md-4 mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-mic-fill mb-3" viewBox="0 0 16 16">
+                    <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z"/>
+                    <path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z"/>
+                </svg>
+                <h4 class="fw-bold">Hone Your Craft</h4>
+                <p class="text-muted">Receive vocal training, experiment with harmonies, and gain invaluable stage experience in a supportive environment.</p>
+            </div>
+
+            <!-- Benefit 2: Find Your Community -->
+            <div class="col-md-4 mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-people-fill mb-3" viewBox="0 0 16 16">
+                    <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                    <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+                </svg>
+                <h4 class="fw-bold">Find Your Community</h4>
+                <p class="text-muted">More than just a club, we're a close-knit family that rehearses, performs, and grows together.</p>
+            </div>
+
+            <!-- Benefit 3: Shine on Stage -->
+            <div class="col-md-4 mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-star-fill mb-3" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <h4 class="fw-bold">Shine on Stage</h4>
+                <p class="text-muted">From campus-wide showcases to intimate acoustic nights, you'll have numerous opportunities to perform.</p>
+            </div>
+        </div>
+    </div>
+
+        </section>
+
+        <section id="Exco">
+        <!-- ====================================================== -->
+        <!--                EXCO MAIN                               -->
+        <!-- ====================================================== -->
+    <div class="container my-5 py-5">
+
+        <!-- Section Title -->
+        <h2 class="text-center mb-5">Meet Our Exco</h2>
+
+        <!-- ====================================================== -->
+        <!--                     EXCO PROFILE                       -->
+        <!-- ====================================================== -->
+        <div class="row text-center justify-content-center mb-5">
+            
+            <!-- President  -->
+            <div class="col-lg-2 col-md-4 col-6 mb-4">
+            <img src="images/Prez.jpg" class="exco-member-img rounded-circle" alt="Photo of Jeslyn Jacob">
+            <h6 class="fw-bold mt-3">Jeslyn Jacob</h6>
+            <p class="text-muted">President</p>
+            </div>
+
+            <!-- Vice President -->
+            <div class="col-lg-2 col-md-4 col-6 mb-4">
+            <img src="images/VPrez1.jpg" class="exco-member-img rounded-circle" alt="Photo of Jordan">
+            <h6 class="fw-bold mt-3">Jordan</h6>
+            <p class="text-muted">Vice President</p>
+            </div>
+
+            <!-- Vice President 2 -->
+            <div class="col-lg-2 col-md-4 col-6 mb-4">
+            <img src="images/VPrez2.jpg" class="exco-member-img rounded-circle" alt="Photo of EXCO member">
+            <h6 class="fw-bold mt-3">Rainier</h6>
+            <p class="text-muted">Vice President</p>
+            </div>
+
+            <!-- Head Of Publicity -->
+            <div class="col-lg-2 col-md-4 col-6 mb-4">
+            <img src="images/Publicity.jpg" class="exco-member-img rounded-circle" alt="Photo of EXCO member">
+            <h6 class="fw-bold mt-3">Desseree Rose</h6>
+            <p class="text-muted">Head Of Publicity</p>
+            </div>
+
+            <!-- Secretary -->
+            <div class="col-lg-2 col-md-4 col-6 mb-4">
+            <img src="images/Secretary.jpg" class="exco-member-img rounded-circle" alt="Photo of EXCO member">
+            <h6 class="fw-bold mt-3">Tosh</h6>
+            <p class="text-muted">Secretary</p>
+            </div>
+
+            <!-- Head Of Logistics -->
+            <div class="col-lg-2 col-md-4 col-6 mb-4">
+            <img src="images/Logistics.jpg" class="exco-member-img rounded-circle" alt="Photo of EXCO member">
+            <h6 class="fw-bold mt-3">Nuha</h6>
+            <p class="text-muted">Head Of Logistics</p>
+            </div>
+
+        </div> <!-- End of EXCO Grid Row -->
+
+
+        <section id="Exco">
+        <hr class="my-5"> 
+        <!-- (President) -->
+        <div class="row align-items-center mb-5">
+            <!-- Image Column -->
+            <div class="col-md-5">
+            <img src="images/Prez.jpg" class="profile-image" alt="A photo of Jeslyn Jacob">
+            </div>
+            <!-- Text Column -->
+            <div class="col-md-7">
+            <h3 class="fw-bold">President: Jeslyn Jacob</h3>
+            <p class="text-muted">Year 2, Diploma in Information Technology</p>
+            
+            <blockquote class="blockquote mt-4">
+                <p>"Because SoundCard let me do things I'd usually only attempt at 2am in my room like belting emotional ballads with the vocal control of a distressed goose. Shout out to my neighbours for surviving putting up with me."</p>
+            </blockquote>
+            </div>
+        </div><!-- End of Person 1 Row -->
+
+        <hr class="my-5"> 
+
+        <!-- Vice President 1 -->
+        <div class="row align-items-center mb-5">
+            <!-- Text Column -->
+            <div class="col-md-7">
+            <h3 class="fw-bold">Vice President: Jordan (ItsJordstar)</h3>
+            <p class="text-muted">Year 2, Animation, Games & Visual Effects</p>
+            
+            <blockquote class="blockquote mt-4">
+                <p>"I joined SoundCard because honestly before I sang, I was a dancer but I have a serious injury on my leg so I told myself “you practice dance a lot already, but you didn't practice to sing anymore” so I wanted to improve myself at singing to become a little indie music artist for Pop/R&B with the small talent of dancing to add onto my performance!"</p>
+            </blockquote>
+            </div>
+            <!-- Image Column -->
+            <div class="col-md-5">
+            <img src="images/VPrez1.jpg" class="profile-image" alt="A photo of Jordan">
+            </div>
+        </div>
+
+
+       <hr class="my-5">
+        <!-- Vice President 2 -->
+        <div class="row align-items-center mb-5">
+            <!-- Image Column -->
+            <div class="col-md-5">
+            <img src="images/VPrez2.jpg" class="profile-image" alt="A photo of Rainier">
+            </div>
+            <!-- Text Column -->
+            <div class="col-md-7">
+            <h3 class="fw-bold">Vice President: Rainier</h3>
+            <p class="text-muted">Year 3 Diploma of Applied Chemistry</p>
+            
+            <blockquote class="blockquote mt-4">
+                <p>"SoundCard has been a safe space where it has helped me to grow and improve as a singer, boost my confidence, and make new friends, both inside of SoundCard and outside of the CCA. It has also exposed me to a wide variety of music genres."</p>
+            </blockquote>
+            </div>
+        </div>
+
+
+       <hr class="my-5">
+        <!-- Head Of Publicity -->
+        <div class="row align-items-center mb-5">
+            <!-- Text Column -->
+            <div class="col-md-7">
+            <h3 class="fw-bold">Head Of Publicity: Desseree Rose</h3>
+            <p class="text-muted">Year 2, Communication & Motion Design</p>
+            
+            <blockquote class="blockquote mt-4">
+                <p>"SoundCard has made me want to further become a better version of myself through the challenge of overcoming the fear of singing infront of an audience. When I joined, I never would have thought to have a strong bond between the friends I’ve met here in SC. Creating memories that I would cherish dearly when I have the time spent with them. The alumnis have been welcoming and encouraging, making it enjoyable for me to attend the sessions. The way they are passionate about singing makes me want to improve too and sing alongside them. 🙏❤️"</p>
+            </blockquote>
+            </div>
+            <!-- Image Column -->
+            <div class="col-md-5">
+            <img src="images/Publicity.jpg" class="profile-image" alt="A photo of Desseree">
+            </div>
+        </div>
+
+
+       <hr class="my-5">
+        <!-- Secretary -->
+        <div class="row align-items-center mb-5">
+            <!-- Image Column -->
+            <div class="col-md-5">
+            <img src="images/Secretary.jpg" class="profile-image" alt="A photo of Tosh">
+            </div>
+            <!-- Text Column -->
+            <div class="col-md-7">
+            <h3 class="fw-bold">Secretary: Tosh</h3>
+            <p class="text-muted">Year 2, nursing</p>
+            
+            <blockquote class="blockquote mt-4">
+                <p>"I feel, with the help of my peers, seniors and alumni, I have improved immensely in terms of singing and especially in confidence. Additionally, the friends I made along the way make me want to keep coming back! "</p>
+            </blockquote>
+            </div>
+        </div>
+
+       <hr class="my-5">
+        <!-- Head Of Logistics -->
+        <div class="row align-items-center mb-5">
+            <!-- Text Column -->
+            <div class="col-md-7">
+            <h3 class="fw-bold">Head Of Logistics: Nuha</h3>
+            <p class="text-muted">Year 2, Diploma of Mass Media Management</p>
+            
+            <blockquote class="blockquote mt-4">
+                <p>"SoundCard has helped me get rid of stage fright and step out of my comfort zone. I deem myself lucky to be a part of this supportive community as they’ve helped me gain confidence in my singing. I’ll never forget the bonds I’ve made through my journey in SoundCard🫶🏼"</p>
+            </blockquote>
+            </div>
+            <!-- Image Column -->
+            <div class="col-md-5">
+            <img src="images/Logistics.jpg" class="profile-image" alt="A photo of Nuha">
+            </div>
+        </div>
+    </div>
+        </section>
+
+
+
+        <!-- ====================================================== -->
+        <!--          NEW: "SEE US IN ACTION" CTA SECTION           -->
+        <!-- ====================================================== -->
+        <section class="see-us-in-action-section text-center">
+            <div class="container">
+                <h2 class="display-4 fw-bold mb-3">See Our Passion in Action</h2>
+                <p class="lead mb-5"> Check out our latest performances and see what we're all about.</p>
+                <a href="Performances.html" class="btn btn-cta-showcase">
+                    View Showcases <i class="bi bi-arrow-right-short"></i>
+                </a>
+            </div>
+        </section>
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/script.js"></script>
+
+
+       <!-- ================== 
+        SITE FOOTER
+  ================== -->
+  
+
+<footer class="site-footer">
+    <div class="container">
+        <!-- Add "align-items-center" to the row to vertically center the content -->
+        <div class="row align-items-center">
+            <!-- Left Column: Footer Links -->
+            <div class="col-lg-8">
+                <ul class="footer-links list-inline mb-0">
+                    <li class="list-inline-item"><a href="index.html">What We Do</a></li>
+                    <li class="list-inline-item"><a href="AboutUs.html">Why Join Us</a></li>
+                    <li class="list-inline-item"><a href="Workshop.html">Workshops</a></li>
+                    <li class="list-inline-item"><a href="Performances.html">Showcases</a></li>
+                    <li class="list-inline-item"><a href="membership-application.html">Join us</a></li>
+                    <li class="list-inline-item"><a href="faq.html">FAQ</a></li>
+                    <li class="list-inline-item"><a href="find-us.html">Find Us</a></li>
+                </ul>
+            </div>
+            <!-- Right Column: Social Icons -->
+            <div class="col-lg-4 text-lg-end">
+                <div class="footer-social-icons">
+                    <a href="https://www.youtube.com/channel/UCYNP0fi2xeucYqFzz6lB1Pw/featured" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/nypsoundcard/?hl=en" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/NYPSoundCard/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Divider Line -->
+        <hr class="footer-divider">
+
+        <!-- Copyright Notice -->
+        <div class="text-center">
+            <p class="footer-copyright">&copy; 2025 Soundcard Club. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+ </body>
+</html>

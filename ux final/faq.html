@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Changed the title for this specific page -->
+    <title>FAQ - Soundcard Club</title>
+    <!-- All your CSS links remain the same -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style3test copy.css"> 
+
+   
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div id="loader">
+        <div class="vinyl-spinner"></div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/images.png" alt="Soundcard Club Logo" width="50" height="50" class="me-2">
+                <div>
+                    <span class="brand-main-text">SOUNDCARD</span><br>
+                    <span class="brand-sub-text">CLUB</span>
+                </div>
+            </a>
+            <!-- Mobile Toggle-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Links-->
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="activitiesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span>About us</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="activitiesDropdown">
+                                <li><a class="dropdown-item" href="index.html">What we do</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="AboutUs.html">Why join us</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="activitiesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span>Activities</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="activitiesDropdown">
+                                <li><a class="dropdown-item" href="Workshop.html">Workshops</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="Performances.html">Showcases</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <!-- Text is now wrapped in a span. 'active' class on the <a> is for the underline. -->
+                            <a class="nav-link dropdown-toggle active" href="#" id="getStartedDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span>Get Started</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="getStartedDropdown">
+                                <!-- The 'dropdown-item-active' class on the <li><a> is for the glow -->
+                                <li><a class="dropdown-item" href="membership-application.html">Join us</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item dropdown-item-active" href="faq.html">FAQ</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+
+                            <a class="nav-link" href="find-us.html">Find Us</a>
+                        </li>
+                    </ul>
+
+                <!-- Right side elements -->
+                <div class="d-flex align-items-center navbar-right-elements">
+                    <div class="social-icons me-3">                                               <!--target="_blank"  opens link in separate browser tab."--> 
+                        <a href="https://www.youtube.com/channel/UCYNP0fi2xeucYqFzz6lB1Pw/featured" target="_blank" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/nypsoundcard/?hl=en" target="_blank" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/NYPSoundCard/" target="_blank" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                    
+                    <a href="membership-application.html" class="btn btn-join-now">Join Now</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+<!-- ================== FAQ PAGE CONTENT ================== -->
+        <section id="faq-header-section">
+            <div class="container-fluid">
+                <h1 class="display-1 fw-bold">FAQ</h1>
+            </div>
+        </section>
+
+        <!-- 2. The Main Content Section -->
+        <main id="faq-page" class="py-5">
+            <div class="container">
+
+        <!-- 3. The Text Header (Inside the main content) -->
+        <div class="text-center mb-5">
+            <h2 class="display-4 fw-bold text-white">Frequently Asked Questions</h2>
+            <p class="lead text-white-50">Answers to your common queries</p>
+        </div>
+
+        <!-- Search Bar Section -->
+        <section id="faq-search-section" class="mb-5">
+            <form id="faq-search-form">
+                <div class="input-group input-group-lg">
+                    <input type="search" id="faq-search-input" class="form-control" placeholder="Search questions..." aria-label="Search questions">
+                    <button class="btn btn-primary" type="submit">SEARCH</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Featured Questions Section (Dynamically filled by JS) -->
+        <section id="featured-questions" class="mb-5">
+            <h2 class="section-title">SEARCHED QUESTIONS</h2>
+            <div class="accordion accordion-flush" id="featured-questions-container">
+                <!-- Search results will appear here -->
+            </div>
+        </section>
+
+        <!-- Most Popular Questions Section (Bootstrap Accordion) -->
+        <section id="popular-questions">
+            <h2 class="section-title">MOST POPULAR QUESTIONS</h2>
+            <div class="accordion accordion-flush" id="faq-accordion">
+
+                <!-- Question 1 -->
+                <div class="accordion-item" data-question="What does soundcard do">
+                    <h2 class="accordion-header" id="q1-heading">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1-collapse" aria-expanded="false" aria-controls="q1-collapse">
+                            What does Soundcard Club do?
+                        </button>
+                    </h2>
+                    <div id="q1-collapse" class="accordion-collapse collapse" aria-labelledby="q1-heading" data-bs-parent="#faq-accordion">
+                        <div class="accordion-body">
+                            Soundcard Club welcomes anyone! You can choose your favourite song and sing it, and our seniors will give feedback for you to improve. You can also choose to perform at stage events that we host!
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="accordion-item" data-question="How often are workshops held">
+                    <h2 class="accordion-header" id="q2-heading">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2-collapse" aria-expanded="false" aria-controls="q2-collapse">
+                            When are the metting times and how often are workshops held?
+                        </button>
+                    </h2>
+                    <div id="q2-collapse" class="accordion-collapse collapse" aria-labelledby="q2-heading" data-bs-parent="#faq-accordion">
+                        <div class="accordion-body">
+                            We meet every Friday 6:00 PM - 9:30 PM. We also have special, advanced workshops featuring guest instructors periodically. Keep an eye on our events page!
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="accordion-item" data-question="Do I need any experience to join">
+                    <h2 class="accordion-header" id="q3-heading">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3-collapse" aria-expanded="false" aria-controls="q3-collapse">
+                            Do I need any experience to join?
+                        </button>
+                    </h2>
+                    <div id="q3-collapse" class="accordion-collapse collapse" aria-labelledby="q3-heading" data-bs-parent="#faq-accordion">
+                        <div class="accordion-body">
+                            Not at all! Soundcard Club is open to all skill levels, from absolute beginners who have never sung before to experienced vocalists. Our community is focused on learning and mutual support.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+</main>
+
+
+<!-- ================== 
+        SITE FOOTER
+  ================== -->
+  
+
+<footer class="site-footer">
+    <div class="container">
+        <!-- Add "align-items-center" to the row to vertically center the content -->
+        <div class="row align-items-center">
+            <!-- Left Column: Footer Links -->
+            <div class="col-lg-8">
+                <ul class="footer-links list-inline mb-0">
+                    <li class="list-inline-item"><a href="index.html">What we do</a></li>
+                    <li class="list-inline-item"><a href="AboutUs.html">Why join us</a></li>
+                    <li class="list-inline-item"><a href="Workshop.html">Workshops</a></li>
+                    <li class="list-inline-item"><a href="Performances.html">Showcases</a></li>
+                    <li class="list-inline-item"><a href="membership-application.html">Join us</a></li>
+                    <li class="list-inline-item"><a href="faq.html">FAQ</a></li>
+                    <li class="list-inline-item"><a href="find-us.html">Find Us</a></li>
+                </ul>
+            </div>
+            <!-- Right Column: Social Icons -->
+            <div class="col-lg-4 text-lg-end">
+                <div class="footer-social-icons">
+                    <a href="https://www.youtube.com/channel/UCYNP0fi2xeucYqFzz6lB1Pw/featured" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/nypsoundcard/?hl=en" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/NYPSoundCard/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Divider Line -->
+        <hr class="footer-divider">
+
+        <!-- Copyright Notice -->
+        <div class="text-center">
+            <p class="footer-copyright">&copy; 2025 Soundcard Club. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    <!-- All your JS script tags remain the same -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts/script4test.js"></script>
+</body>
+</html>
